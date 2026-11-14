@@ -1,9 +1,11 @@
 import { useParams, Link } from "react-router-dom";
 import { allItems } from "../api/rayan";
 import { SITE } from "../config/site";
+import { useState } from "react";
 
 export default function RayanDetails() {
   const { id } = useParams();
+  const [selected, setSelected] = useState(null);
   const item = allItems.find((i) => i.id === Number(id));
 
   if (!item) {
@@ -14,6 +16,8 @@ export default function RayanDetails() {
       </div>
     );
   }
+
+  const mainImage = selected || item.image;
 
   const specs = [
         { label: "Material", value: item.material },
@@ -28,12 +32,28 @@ export default function RayanDetails() {
     <div className="details">
         <div
           className="details-backdrop"
-          style={{ backgroundImage: `url(${item.image})` }}
+          style={{ backgroundImage: `url(${mainImage})` }}
         />
         <div className="details-content">
             <Link to="/">← Back</Link>
             <div className="details-main">
-                <img src={item.image} alt={item.title} />
+                <div className="details-gallery">
+                    <img src={mainImage} alt={item.title} />
+
+                    {item.images.length > 1 && (
+                        <div className="details-thumbs">
+                        {item.images.map((src, i) => (
+                            <img
+                            key={src}
+                            src={src}
+                            alt={`${item.title} view ${i + 1}`}
+                            className={src === mainImage ? "active" : ""}
+                            onClick={() => setSelected(src)}
+                            />
+                        ))}
+                        </div>
+                    )}
+                </div>
                 <div className="details-info">
                     <h1>{item.title}</h1>
 
