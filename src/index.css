@@ -465,3 +465,35 @@ code {
 .banner-slide.active {
   opacity: 1;
 }
+
+.bts h2 {
+  margin: 24px 0 12px;
+}
+
+.bts-row {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+}
+
+.bts-card {
+  flex: 0 0 260px;
+}
+
+.bts-card iframe {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border: 0;
+  border-radius: 12px;
+}
+
+.bts-card p {
+  margin: 8px 0 0;
+}
+
+.about {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}

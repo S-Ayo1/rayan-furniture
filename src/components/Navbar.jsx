@@ -10,6 +10,7 @@ export default function Navbar() {
       </Link>
       <nav className="navbar-links">
         <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
         <a href="#contact">Contact</a>
       </nav>
     </header>
