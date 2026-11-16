@@ -33,9 +33,9 @@ export const trending = [
 ];
 
 export const topRated = [
-  { id: 1125, ...pics(1125), title: "Rayan 1", description: "Add a description here.", price: 150000, material: "Solid oak" },
-  { id: 1126, ...pics(1126), title: "Rayan 2", description: "Add a description here.", price: 200000, material: "Walnut wood" },
-  { id: 1127, ...pics(1127), title: "Rayan 3", description: "Add a description here.", price: 120000, material: "Pine wood" },
+  { id: 1125, ...pics(1125), title: "Modern Dining Table", description: "A stylish blend of elegance and functionality, perfect for elevating your dining space.", price: 150000, material: "Solid oak" },
+  { id: 1126, ...pics(1126), title: "Luxury Dining Table", description: "Beautifully designed to bring sophistication and a touch of class to every dining experience.", price: 200000, material: "Walnut wood" },
+  { id: 1127, ...pics(1127), title: "Classic Dining Table", description: "Timeless in design and built for everyday comfort, making every meal feel special.", price: 120000, material: "Pine wood" },
 ];
 
 export const maintainance = [

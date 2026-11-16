@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink} from "react-router-dom";
 import logo from "../assets/logo.png";
 import { SITE } from "../config/site";
 
@@ -9,8 +9,8 @@ export default function Navbar() {
         <img src={logo} alt={SITE.name} />
       </Link>
       <nav className="navbar-links">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
+        <NavLink to="/" end>Home</NavLink>
+        <NavLink to="/about">About</NavLink>
         <a href="#contact">Contact</a>
       </nav>
     </header>

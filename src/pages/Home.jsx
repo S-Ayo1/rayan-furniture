@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <>
       <Banner />
-      <RayanRow title="Trending" items={trending} />
-      <RayanRow title="Top Rated" items={topRated} />
-      <RayanRow title="Maintain" items={maintainance} />
+      <RayanRow title="Trending Bed Frames" items={trending} />
+      <RayanRow title="Top Rated Dining Tables" items={topRated} />
+      <RayanRow title="Maintenance" items={maintainance} />
     </>
   );
 }
